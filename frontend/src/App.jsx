@@ -121,7 +121,6 @@ function App() {
     });
   };
 
-  // --- PHẦN GIAO DIỆN (UI) ĐÃ ĐƯỢC LÀM ĐẸP ---
   return (
     <div
       style={{
@@ -171,7 +170,6 @@ function App() {
           </div>
         )}
 
-        {/* Tìm kiếm */}
         <form
           onSubmit={handleSearch}
           style={{ display: "flex", gap: "10px", marginBottom: "30px" }}
@@ -226,7 +224,6 @@ function App() {
           </button>
         </form>
 
-        {/* Form Thêm/Sửa */}
         <div
           style={{
             backgroundColor: "#f8f9fa",
@@ -397,7 +394,6 @@ function App() {
           </form>
         </div>
 
-        {/* Bảng Danh sách */}
         {loading ? (
           <p
             style={{
@@ -441,6 +437,7 @@ function App() {
                     Ẩm thực
                   </th>
                   <th style={{ padding: "15px", fontWeight: "bold" }}>Giá</th>
+                  <th style={{ padding: "15px", fontWeight: "bold" }}>SL</th>
                   <th
                     style={{
                       padding: "15px",
@@ -496,6 +493,9 @@ function App() {
                       }}
                     >
                       {f.price.toLocaleString("vi-VN")} đ
+                    </td>
+                    <td style={{ padding: "15px", fontWeight: "bold" }}>
+                      {f.quantity}
                     </td>
                     <td style={{ padding: "15px", textAlign: "center" }}>
                       <button
